@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.omnilatent.adsmanager": "https://github.com/vi-part2/OmniAdsManager.git",
+    "com.omnilatent.firebasemanager": "https://github.com/Omnilatent/OmniFirebaseManager.git",
     "com.omnilatent.litjson": "https://github.com/Omnilatent/UnityLitJson.git",
     "com.omnilatent.simpleanimation": "https://gitlab.volio.vn/jacat-tech/SimpleAnimation.git",
     "com.omnilatent.utils": "https://github.com/Omnilatent/Utils.git",

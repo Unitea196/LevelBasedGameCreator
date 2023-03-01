@@ -7,6 +7,20 @@
       "dependencies": {},
       "hash": "73d86259ce31ce7f4dfe1d028ea1c3edf96c23e4"
     },
+    "com.omnilatent.adsmanager": {
+      "version": "https://github.com/vi-part2/OmniAdsManager.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4d5b39a6a5512ad471216c3a02abbcbf9397b408"
+    },
+    "com.omnilatent.firebasemanager": {
+      "version": "https://github.com/Omnilatent/OmniFirebaseManager.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f1152584cfef530a8ff7f018f4502899fa8ea08a"
+    },
     "com.omnilatent.litjson": {
       "version": "https://github.com/Omnilatent/UnityLitJson.git",
       "depth": 0,
