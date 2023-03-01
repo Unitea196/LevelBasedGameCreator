@@ -7,12 +7,26 @@
       "dependencies": {},
       "hash": "73d86259ce31ce7f4dfe1d028ea1c3edf96c23e4"
     },
+    "com.omnilatent.litjson": {
+      "version": "https://github.com/Omnilatent/UnityLitJson.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "feead376a9e0657a2cef4d8ef78ae2414ae4367e"
+    },
     "com.omnilatent.simpleanimation": {
       "version": "https://gitlab.volio.vn/jacat-tech/SimpleAnimation.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "515cc6796ea75b56f4aa768c94be5f940f1d35fd"
+    },
+    "com.omnilatent.utils": {
+      "version": "https://github.com/Omnilatent/Utils.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b822a9b288bdaba6393b70274186caf7d5b924b3"
     },
     "com.unity.2d.animation": {
       "version": "7.0.8",
