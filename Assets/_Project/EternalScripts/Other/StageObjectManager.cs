@@ -87,7 +87,7 @@ public static class StageObjectManager
     [MenuItem("Tools/Stage Object/Export all stages data to text file")]
     public static void ExportStagesDataToText()
     {
-        StageData[] stageDatas = Resources.LoadAll<StageData>(StageDataPath);
+        StageDataBase[] stageDatas = Resources.LoadAll<StageDataBase>(StageDataPath);
 
         string objectsDataText = "";
         for (int i = 0; i < stageDatas.Length; i++)
@@ -145,7 +145,7 @@ public class RenameStageObject : EditorWindow
         if (GUILayout.Button("Rename", GUILayout.Width(100)))
         {
             int count = 0;
-            StageData[] stageDatas = Resources.LoadAll<StageData>("StageData");
+            StageDataBase[] stageDatas = Resources.LoadAll<StageDataBase>("StageData");
             for (int i = 0; i < stageDatas.Length; i++)
             {
                 for (int j = 0; j < stageDatas[i].stageObjects.Count; j++)

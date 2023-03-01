@@ -12,7 +12,7 @@ public class StageSetupEditor : Editor
         StageSetup.onCreateEmptyStage += CreatAsset;
     }
 
-    static void Save(StageData newData)
+    static void Save(StageDataBase newData)
     {
         if (string.IsNullOrEmpty(newData.StageID))
         {
@@ -20,7 +20,7 @@ public class StageSetupEditor : Editor
             return;
         }
 
-        StageData oldData = Resources.Load<StageData>($"{Const.STAGE_DATA_PATH}/stage_{newData.StageID}");
+        StageDataBase oldData = Resources.Load<StageDataBase>($"{Const.STAGE_DATA_PATH}/stage_{newData.StageID}");
         bool newStage = false;
         if (oldData == null)
         {
@@ -38,9 +38,9 @@ public class StageSetupEditor : Editor
         Debug.Log($"Save stage_{oldData.StageID} sucess : {state}");
     }
 
-    static StageData CreatAsset(string stageID)
+    static StageDataBase CreatAsset(string stageID)
     {
-        StageData data = ScriptableObject.CreateInstance<StageData>();
+        StageDataBase data = ScriptableObject.CreateInstance<StageDataBase>();
         data.StageID = stageID;
 
         string path = $"Assets/Resources/{Const.STAGE_DATA_PATH}/stage_{stageID}.asset";
@@ -53,7 +53,7 @@ public class StageSetupEditor : Editor
         return data;
     }
 
-    static void CopyData(StageData from, StageData to)
+    static void CopyData(StageDataBase from, StageDataBase to)
     {
         to.ResetData();
         to.CopyFrom(from);

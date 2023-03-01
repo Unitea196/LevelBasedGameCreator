@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToggleSetting : MonoBehaviour
+public class ToggleButtonSetting : MonoBehaviour
 {
     [SerializeField] private GameObject toggleOn, toggleOff;
     [SerializeField] private string setting;

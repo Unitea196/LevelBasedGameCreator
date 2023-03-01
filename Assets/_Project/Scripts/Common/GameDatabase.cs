@@ -7,9 +7,9 @@ using UnityEngine.U2D;
 
 public static class GameDatabase
 {
-    public static StageData GetStageData(string id)
+    public static StageDataBase GetStageData(string id)
     {
-        return Resources.Load<StageData>($"{Const.STAGE_DATA_PATH}/stage_{id}");
+        return Resources.Load<StageDataBase>($"{Const.STAGE_DATA_PATH}/stage_{id}");
     }
 
     public static async UniTask<T> LoadResourceAsyn<T>(string path) where T : UnityEngine.Object

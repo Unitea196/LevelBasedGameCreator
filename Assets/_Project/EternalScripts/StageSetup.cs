@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class StageSetup : MonoBehaviour
 {
-    public delegate StageData CreateEmptyStageDelegate(string stageID);
+    public delegate StageDataBase CreateEmptyStageDelegate(string stageID);
 
     public static StageSetup Instance;
-    public static Action<StageData> onSave;
+    public static Action<StageDataBase> onSave;
     public static CreateEmptyStageDelegate onCreateEmptyStage;
     [SerializeField] bool destroyExistObject = true;
     [SerializeField] bool loadStage = true;
 
-    StageData data;
+    StageDataBase data;
     public string stageID;
 
     /// <summary>
@@ -22,7 +22,7 @@ public class StageSetup : MonoBehaviour
     /// </summary>
     Dictionary<string, StageObject> allPrefabs = new Dictionary<string, StageObject>();
     public Dictionary<string, StageObject> AllPrefabs { get => allPrefabs; set => allPrefabs = value; }
-    public StageData Data => data;
+    public StageDataBase Data => data;
 
     public Dictionary<string, List<StageObject>> allObjectInScene = new Dictionary<string, List<StageObject>>();
 
@@ -40,7 +40,7 @@ public class StageSetup : MonoBehaviour
             DestroyStageObjectBeforeLoad();
 #endif
 
-        StageData origin = GameDatabase.GetStageData(stageID);
+        StageDataBase origin = GameDatabase.GetStageData(stageID);
         if (origin == null)
         {
             if (onCreateEmptyStage != null)
@@ -54,7 +54,7 @@ public class StageSetup : MonoBehaviour
             }
         }
 
-        data = ScriptableObject.CreateInstance<StageData>();
+        data = ScriptableObject.CreateInstance<StageDataBase>();
         data.CopyFrom(origin);
 
         this.stageID = data.StageID;
@@ -97,7 +97,7 @@ public class StageSetup : MonoBehaviour
     public void Save()
     {
         if (data == null)
-            data = ScriptableObject.CreateInstance<StageData>();
+            data = ScriptableObject.CreateInstance<StageDataBase>();
         else
             data.ResetData();
 
