@@ -5,20 +5,23 @@ using System.IO;
 using Cysharp.Threading.Tasks;
 using UnityEngine.U2D;
 
-public static class GameDatabase
+namespace Unitea.Common
 {
-    public static StageDataBase GetStageData(string id)
+    public static class GameDatabase
     {
-        return Resources.Load<StageDataBase>($"{Const.STAGE_DATA_PATH}/stage_{id}");
-    }
-
-    public static async UniTask<T> LoadResourceAsyn<T>(string path) where T : UnityEngine.Object
-    {
-        var asset = await Resources.LoadAsync<T>(path);
-        if (asset == null)
+        public static StageData GetStageData(string id)
         {
-            Debug.LogException(new System.NullReferenceException($"Resources not found at path: {path}"));
+            return Resources.Load<StageData>($"{Const.STAGE_DATA_PATH}/stage_{id}");
         }
-        return asset as T;
+
+        public static async UniTask<T> LoadResourceAsyn<T>(string path) where T : UnityEngine.Object
+        {
+            var asset = await Resources.LoadAsync<T>(path);
+            if (asset == null)
+            {
+                Debug.LogException(new System.NullReferenceException($"Resources not found at path: {path}"));
+            }
+            return asset as T;
+        }
     }
 }

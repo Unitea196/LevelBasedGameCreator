@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UniRx;
 using UnityEngine;
+using Unitea.Common;
 
 public class GameplayController : Controller
 {
@@ -46,11 +47,11 @@ public class GameplayController : Controller
         else
             sceneData = data as SceneData;
 
-        StageDataBase stageData = GameDatabase.GetStageData(sceneData.stageId);
+        StageData stageData = GameDatabase.GetStageData(sceneData.stageId);
         _ = SetupAsync(stageData);
     }
 
-    private async Cysharp.Threading.Tasks.UniTask SetupAsync(StageDataBase data)
+    private async Cysharp.Threading.Tasks.UniTask SetupAsync(StageData data)
     {
         await stageSetup.LoadStageAsync(data.StageID);
     }

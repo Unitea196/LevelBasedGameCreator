@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LitJson;
 
-namespace QQ.StageBase
+namespace Unitea.Common
 {
     public static class User
     {
@@ -11,12 +11,14 @@ namespace QQ.StageBase
 
         class UserData
         {
-            public string stageId;
+            public string s_stageId;
+            public int i_stageId;
             public Dictionary<string, int> items = new Dictionary<string, int>();
 
             public void Init()
             {
-                stageId = "1";
+                s_stageId = "1_1";
+                i_stageId = 1;
             }
         }
 
@@ -25,7 +27,23 @@ namespace QQ.StageBase
         /// <summary>
         /// current process stage id
         /// </summary>
-        public static int StageId { get => int.Parse(data.stageId); set { data.stageId = value.ToString(); Save(); } }
+        public static string s_StageId { get => data.s_stageId; set { data.s_stageId = value; Save(); } }
+        public static int i_StageId
+        {
+            get
+            {
+                if (int.TryParse(s_StageId, out int id))
+                    return id;
+                else
+                    return i_StageId;
+            }
+            set
+            {
+                s_StageId = value.ToString();
+                i_StageId = value;
+            }
+        }
+
         static User()
         {
             Load();
