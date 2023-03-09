@@ -5,6 +5,7 @@
     <package>com.google.ads.mediation:adcolony:4.8.0.0</package>
     <package>com.google.ads.mediation:applovin:11.7.1.0</package>
     <package>com.google.ads.mediation:chartboost:9.2.0.0</package>
+    <package>com.google.ads.mediation:facebook:6.12.0.0</package>
     <package>com.google.ads.mediation:fyber:8.2.1.0</package>
     <package>com.google.ads.mediation:imobile:2.3.0.0</package>
     <package>com.google.ads.mediation:inmobi:10.1.2.1</package>
