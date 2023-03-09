@@ -18,7 +18,10 @@
             url "https://android-sdk.is.com/" // Assets/GoogleMobileAds/Editor/IronSourceMediationDependencies.xml:8
         }
         maven {
-            url "https://dl.google.com/dl/android/maven2/" // Assets/GoogleMobileAds/Editor/AdColonyMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/AppLovinMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/ChartboostMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/DTExchangeMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/IMobileMediationDependencies.xml:9, Assets/GoogleMobileAds/Editor/InMobiMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/IronSourceMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/MaioMediationDependencies.xml:9, Assets/GoogleMobileAds/Editor/MetaAudienceNetworkMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/MyTargetMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/NendMediationDependencies.xml:9, Assets/GoogleMobileAds/Editor/PangleMediationDependencies.xml:9
+            url "https://sdk.tapjoy.com/" // Assets/GoogleMobileAds/Editor/TapjoyMediationDependencies.xml:8
+        }
+        maven {
+            url "https://dl.google.com/dl/android/maven2/" // Assets/GoogleMobileAds/Editor/AdColonyMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/AppLovinMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/ChartboostMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/DTExchangeMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/IMobileMediationDependencies.xml:9, Assets/GoogleMobileAds/Editor/InMobiMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/IronSourceMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/MaioMediationDependencies.xml:9, Assets/GoogleMobileAds/Editor/MetaAudienceNetworkMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/MyTargetMediationDependencies.xml:8, Assets/GoogleMobileAds/Editor/NendMediationDependencies.xml:9, Assets/GoogleMobileAds/Editor/PangleMediationDependencies.xml:9, Assets/GoogleMobileAds/Editor/TapjoyMediationDependencies.xml:8
         }
         maven {
             url "https://imobile.github.io/adnw-sdk-android/" // Assets/GoogleMobileAds/Editor/IMobileMediationDependencies.xml:9
@@ -57,6 +60,7 @@ dependencies {
     implementation 'com.google.ads.mediation:mytarget:5.15.5.0' // Assets/GoogleMobileAds/Editor/MyTargetMediationDependencies.xml:8
     implementation 'com.google.ads.mediation:nend:9.0.0.0' // Assets/GoogleMobileAds/Editor/NendMediationDependencies.xml:9
     implementation 'com.google.ads.mediation:pangle:4.9.0.7.0' // Assets/GoogleMobileAds/Editor/PangleMediationDependencies.xml:9
+    implementation 'com.google.ads.mediation:tapjoy:12.11.1.0' // Assets/GoogleMobileAds/Editor/TapjoyMediationDependencies.xml:8
     implementation 'com.google.android.gms:play-services-ads:21.3.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:7
     implementation 'com.google.android.gms:play-services-base:18.0.1' // Assets/Firebase/Editor/AppDependencies.xml:17
     implementation 'com.google.firebase:firebase-analytics:21.0.0' // Assets/Firebase/Editor/RemoteConfigDependencies.xml:15
