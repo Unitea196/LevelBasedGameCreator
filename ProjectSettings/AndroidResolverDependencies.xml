@@ -16,6 +16,7 @@
     <package>com.google.ads.mediation:pangle:4.9.0.7.0</package>
     <package>com.google.ads.mediation:tapjoy:12.11.1.0</package>
     <package>com.google.ads.mediation:unity:4.5.0.0</package>
+    <package>com.google.ads.mediation:verizonmedia:1.14.0.1</package>
     <package>com.google.android.gms:play-services-ads:21.3.0</package>
     <package>com.google.android.gms:play-services-base:18.0.1</package>
     <package>com.google.firebase:firebase-analytics:21.0.0</package>
