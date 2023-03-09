@@ -9,6 +9,7 @@
     <package>com.google.ads.mediation:imobile:2.3.0.0</package>
     <package>com.google.ads.mediation:inmobi:10.1.2.1</package>
     <package>com.google.ads.mediation:ironsource:7.2.6.0</package>
+    <package>com.google.ads.mediation:maio:1.1.16.1</package>
     <package>com.google.android.gms:play-services-ads:21.3.0</package>
     <package>com.google.android.gms:play-services-base:18.0.1</package>
     <package>com.google.firebase:firebase-analytics:21.0.0</package>
